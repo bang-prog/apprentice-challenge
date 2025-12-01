@@ -1,13 +1,10 @@
-# アプレンティス Web テスト
+# アプレンティス for 九大生 事前学習
 
-こちらの Web テストでは、アプレンティスの学習を模擬体験していただきます。
+こちらの 事前学習では、アプレンティスの学習を始めるにあたって必要なスキルを身につけていただきます。
 
-## 選考内容
-
-アプレンティスのカリキュラムの一部を体験していただきます。課題は大きく2つあります。
+## 内容
 
 1. Linux/Git,GitHub
-2. なぜエンジニアになりたいのかの論述
 
 必要なスキルをまとめたものとして [Skill Doc](skilldoc) が用意されています。Skill Doc の内容を理解することで、エンジニアとして必要なスキルが「わかった」状態になります。
 
@@ -19,11 +16,11 @@ Skill Doc の内容を身につけるためにある課題が [QUEST](quest) で
 
 ## 期間
 
-2週間
+アプレンティス for 九大生 カリキュラム開始まで (2025/12/8)
 
 ## 提出方法
 
-メールに記載の応募フォームより提出ください。
+[こちらのスプレットシート](https://docs.google.com/spreadsheets/d/1_0lx9frTsnLWrZxZuc88ddjRWyUJ9PToQU8s9n8NtlE/edit?gid=1839938786#gid=1839938786&range=E:E)のE列(提出クエスト事前学習)の、ご自身の名前の行にGitHubのURLを貼り付けてください。
 
 ## 注意事項
 
@@ -58,11 +55,4 @@ Skill Doc の内容を身につけるためにある課題が [QUEST](quest) で
    16. [[Git][Level2] GitHub フローに従って開発を進めることができる](/quest/git/PULLREQUEST.md)
 3. 提出 QUEST を提出する
    1. [パスワードマネージャー](/quest/linux/PASSWORD_MANAGER.md)
-   2. 上記のコードを GitHub 上にアップして提出する。その際に、GitHub フローに従ってプルリクエストを作成し進めること
-
-### 2. なぜエンジニアになりたいのかの論述
-
-1. Skill Doc を読む
-   1. [読みやすいドキュメントを書ける](/skilldoc/DOCUMENTATION.md)
-2. 提出 QUEST を提出する
-   1. [なぜエンジニアか？](/quest/career/WHY_ENGINEER.md)
+   2. 上記のコードを GitHub 上にアップして、GitHubのリンクを[スプレッドシート](https://docs.google.com/spreadsheets/d/1_0lx9frTsnLWrZxZuc88ddjRWyUJ9PToQU8s9n8NtlE/edit?gid=1839938786#gid=1839938786&range=E:E)に提出する。その際に、GitHub フローに従ってプルリクエストを作成し進めること
