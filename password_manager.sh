@@ -17,24 +17,35 @@ while true ; do
         echo "パスワードを入力してください："
         read password
 
-        echo "$service_name, $user_name, $password" >> password.txt
+        echo "$service_name,$user_name,$password" >> password.txt
+
+        ## 暗号化
+        ##　2> /dev/nullでいらない表示をださない
+        gpg -c --yes password.txt 2> /dev/null
+
         echo "パスワードの追加は成功しました。"
     
     # Get Passwordが入力された場合
     elif [ "$user_input" = "Get Password" ]; then
         echo "サービス名を入力してください"
         read find_service
-        result=$(grep "$find_service" password.txt)
-
+        
+        ## 解凍
+        if [ -f password.txt.gpg ]; then
+            result=$(gpg -d password.txt.gpg 2> /dev/null | grep "^$find_service,")
+        else 
+            result=""
+        fi
+        
         ## サービス名が保存されていなかった場合
         if [ "$result" = "" ]; then
             echo "そのサービスは登録されていません。"
     
         ## サービス名が保存されていた場合
         else
-            # cutでテキストの一行を分割
-            # -d,で,のところで区切る
-            # -f1で一つ目のかたまりを格納
+            ## cutでテキストの一行を分割
+            ## -d,で,のところで区切る
+            ## -f1で一つ目のかたまりを格納
             name_service=$(echo ${result} | cut -d, -f1)
             name_user=$(echo ${result} | cut -d, -f2)
             name_password=$(echo ${result} | cut -d, -f3)
